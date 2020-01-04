@@ -32,19 +32,25 @@ const myQuotes = [
 /***
  * `getRandomQuote` function
 ***/
+
+// Math functions were used to return a value of the Array between 0 and the length of the whole array,
 function getRandomQuote(){
 let ranQuoteNum = Math.floor(Math.random()* myQuotes.length);
 let ranQuote = myQuotes[ranQuoteNum];
 return ranQuote ;
 
 };
+// logged out the function to assure it worked properly before moving forward.
 console.log(getRandomQuote());
 
+// set a variable to an arrow function  to get the value of rgb for the background color
+// 256 is the max for color and we need a random number between that and 0 for the R, G, and B
+// used bgColor variable to rgb function and set to the documents background.
 const rgbRandom = (()=>{
-  var x = Math.floor(Math.random() * 256);
-  var y = Math.floor(Math.random() * 256);
-  var z = Math.floor(Math.random() * 256);
-  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  const R = Math.floor(Math.random() * 256);
+  const G = Math.floor(Math.random() * 256);
+  const B = Math.floor(Math.random() * 256);
+  const bgColor = "rgb(" + R + "," + G + "," + B + ")";
 console.log(bgColor);
 
   document.body.style.background = bgColor;
@@ -55,6 +61,8 @@ console.log(bgColor);
 /***
  * `printQuote` function
 ***/
+
+// just created strings to produce qoutes and all there objects by using object properties if they are available
 function printQuote(){
 let myRanQuote = getRandomQuote();
 let quote = '<p class = "quote">' + myRanQuote.quote + '</p>';
@@ -78,7 +86,8 @@ document.getElementById("quote-box").innerHTML = myMessage;
 return myMessage;
 }
 
-
+//finally, created a var to hold setInterval function with 20 seconds between each load
+//add to the buttons event listener
 const refresher = window.setInterval(() => {
   printQuote();
 }, 20000);
