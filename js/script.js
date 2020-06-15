@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 let myMessage = '';
-const myQuotes = [
+const quotes = [
     {quote: "The more sand has escaped from the hourglass of our life, the clearer we should see through it.", source: "Niccolo Machiavell" 
      },
      
@@ -35,8 +35,8 @@ const myQuotes = [
 
 // Math functions were used to return a value of the Array between 0 and the length of the whole array,
 function getRandomQuote(){
-let ranQuoteNum = Math.floor(Math.random()* myQuotes.length);
-let ranQuote = myQuotes[ranQuoteNum];
+let ranQuoteNum = Math.floor(Math.random()* quotes.length);
+let ranQuote = quotes[ranQuoteNum];
 return ranQuote ;
 
 };
@@ -46,7 +46,7 @@ console.log(getRandomQuote());
 // set a variable to an arrow function  to get the value of rgb for the background color
 // 256 is the max for color and we need a random number between that and 0 for the R, G, and B
 // used bgColor variable to rgb function and set to the documents background.
-const rgbRandom = (()=>{
+const rgbRandom = (()=> {
   const R = Math.floor(Math.random() * 256);
   const G = Math.floor(Math.random() * 256);
   const B = Math.floor(Math.random() * 256);
@@ -90,7 +90,7 @@ return myMessage;
 //add to the buttons event listener
 const refresher = window.setInterval(() => {
   printQuote();
-}, 20000);
+}, 10000);
 
 
 /***
@@ -98,4 +98,4 @@ const refresher = window.setInterval(() => {
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote,refresher, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
