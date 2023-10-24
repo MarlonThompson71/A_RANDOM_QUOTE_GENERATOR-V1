@@ -1,6 +1,6 @@
 # A_RANDOM_QUOTE_GENERATOR-V1
  preview
-![Screenshot](https://github.com/MarlonThompson71/myWeatherApp/assets/59469213/6a476293-02d7-44c0-8a87-fafea52fc068
+![Screenshot](https://github.com/MarlonThompson71/A_RANDOM_QUOTE_GENERATOR-V1/assets/59469213/ee742461-cda5-43d0-add8-9a47cef5fa9e
 )
 ### `npm start`
 
